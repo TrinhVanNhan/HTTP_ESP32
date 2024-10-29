@@ -44,10 +44,7 @@
 
 static const char *TAG = "example";
 
-static const char *REQUEST = "GET " WEB_PATH " HTTP/1.0\r\n"
-    "Host: "WEB_SERVER":"WEB_PORT"\r\n"
-    "User-Agent: esp-idf/1.0 esp32\r\n"
-    "\r\n";
+static const char *REQUEST ;
 
 static void http_get_task(void *pvParameters)
 {
