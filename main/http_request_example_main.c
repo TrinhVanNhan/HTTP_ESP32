@@ -22,6 +22,20 @@
 #include "lwip/netdb.h"
 #include "lwip/dns.h"
 #include "sdkconfig.h"
+ #include "esp_wifi.h"
+#include "esp_event.h"
+
+#include "lwip/err.h"
+#include "lwip/sockets.h"
+#include "lwip/sys.h"
+#include <lwip/netdb.h>
+
+#include "driver/uart.h"
+#include "driver/gpio.h"
+#include "sdkconfig.h"
+#include "esp_log.h"
+
+#include "regex.h"
 
 /* Constants that aren't configurable in menuconfig */
 #define WEB_SERVER "example.com"
