@@ -22,26 +22,31 @@
 #include "lwip/netdb.h"
 #include "lwip/dns.h"
 #include "sdkconfig.h"
- #include "esp_wifi.h"
-#include "esp_event.h"
-
-#include "lwip/err.h"
-#include "lwip/sockets.h"
-#include "lwip/sys.h"
-#include <lwip/netdb.h>
 
 #include "driver/uart.h"
 #include "driver/gpio.h"
 #include "sdkconfig.h"
-#include "esp_log.h"
-
 #include "regex.h"
 
 /* Constants that aren't configurable in menuconfig */
 #define WEB_SERVER "example.com"
 #define WEB_PORT "80"
 #define WEB_PATH "/"
+/****************************************** */
+/*WIFI*/
+#define EXAMPLE_ESP_WIFI_SSID      "Thang nao co tien."
+#define EXAMPLE_ESP_WIFI_PASS      "55556666"
+#define EXAMPLE_ESP_MAXIMUM_RETRY   10
 
+#define ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD   WIFI_AUTH_WEP
+#define ESP_WIFI_SAE_MODE WPA3_SAE_PWE_BOTH
+#define EXAMPLE_H2E_IDENTIFIER ""
+#define WIFI_CONNECTED_BIT  BIT0
+#define WIFI_FAIL_BIT       BIT1
+#define WIFI_DISCONNECT_BIT     BIT2
+
+
+/***************************************** */
 static const char *TAG = "example";
 
 static const char *REQUEST ;
